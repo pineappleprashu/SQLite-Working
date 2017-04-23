@@ -1,5 +1,6 @@
 package com.example.android.databaseworking;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,9 @@ public class GroupDetails extends AppCompatActivity {
                 Group group = new Group(name,location);
                 GroupDatabaseHandler gd = new GroupDatabaseHandler(GroupDetails.this);
                 gd.addGroup(group);
+                Intent intent = new Intent(GroupDetails.this, AddMemberActivity.class);
+                intent.putExtra("Group",name);
+                startActivity(intent);
             }
         });
     }

@@ -22,13 +22,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentMain = new Intent(MainActivity.this ,
-                        addMember.class);
+                        GroupDetails.class);
                 MainActivity.this.startActivity(intentMain);
             }
         });
     }
-
-
-
-
 }
